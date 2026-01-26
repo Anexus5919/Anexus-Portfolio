@@ -189,9 +189,12 @@ revealElements.forEach((el, index) => {
 // ==========================================
 // Project Card Tilt Effect
 // ==========================================
-const projectCards = document.querySelectorAll('.project-card');
+function initTiltEffect(card) {
+    card.addEventListener('mouseenter', () => {
+        if (window.innerWidth < 768) return;
+        card.style.transition = 'transform 0.15s ease';
+    });
 
-projectCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
         if (window.innerWidth < 768) return;
 
@@ -202,16 +205,21 @@ projectCards.forEach(card => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
+        // Reduced tilt intensity (divided by 40 instead of 15)
+        const rotateX = (y - centerY) / 40;
+        const rotateY = (centerX - x) / 40;
 
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
     });
 
     card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.3s ease';
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
-});
+}
+
+// Initialize tilt for all project cards
+document.querySelectorAll('.project-card').forEach(initTiltEffect);
 
 // ==========================================
 // Hero Animation on Load
@@ -280,11 +288,11 @@ if (showMoreBtn && hiddenProjects.length > 0) {
                 project.classList.remove('hidden');
                 // Trigger reveal animation for newly shown projects
                 project.style.opacity = '0';
-                project.style.transform = 'translateY(20px)';
+                project.style.transform = 'translateY(20px) scale(1)';
                 setTimeout(() => {
                     project.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     project.style.opacity = '1';
-                    project.style.transform = 'translateY(0)';
+                    project.style.transform = 'translateY(0) scale(1)';
                 }, index * 50);
             }
         });
