@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Singh | Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">AS</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#opensource" class="nav-link">Open Source</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <!-- Profile on Left -->
+            <div class="hero-visual">
+                <div class="profile-artistic">
+                    <div class="splash splash-1"></div>
+                    <div class="splash splash-2"></div>
+                    <div class="splash splash-3"></div>
+                    <div class="splash splash-4"></div>
+                    <div class="splash splash-5"></div>
+                    <img src="profile.svg" alt="Adarsh Singh" class="profile-image">
+                </div>
+                <!-- Rotating Hire Me Badge -->
+                <div class="hire-badge">
+                    <svg viewBox="0 0 100 100" class="hire-badge-text">
+                        <defs>
+                            <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
+                        </defs>
+                        <text>
+                            <textPath href="#circle">Web Developer . UI/UX Designer . </textPath>
+                        </text>
+                    </svg>
+                    <span class="hire-badge-inner">Hire Me</span>
+                </div>
+            </div>
+            <!-- Text on Right -->
+            <div class="hero-text">
+                <h1 class="hero-headline">Turning Vision Into Reality With Code And Design.</h1>
+                <p class="hero-description">
+                    As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
+                    Explore my latest projects showcasing my expertise in Next.js, TypeScript, and modern web development.
+                </p>
+                <div class="hero-cta">
+                    <a href="Adarsh_Singh_SDE_Resume.pdf" download class="btn btn-primary">
+                        Resume
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Contact</a>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Light Bulb -->
+        <div class="decorative-bulb">
+            <svg viewBox="0 0 64 64" fill="none">
+                <ellipse cx="32" cy="24" rx="18" ry="20" fill="#FCD34D" opacity="0.9"/>
+                <rect x="26" y="44" width="12" height="8" rx="2" fill="#FCD34D"/>
+                <rect x="28" y="52" width="8" height="4" rx="1" fill="#F59E0B"/>
+                <path d="M26 48h12M26 50h12" stroke="#F59E0B" stroke-width="1.5"/>
+                <path d="M32 12v4M24 16l2 3M40 16l-2 3" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a <strong>B.E. Information Technology</strong> student at
+                        <strong>Vivekanand Education Society's Institute of Technology, Chembur</strong>
+                        with a strong academic record (CGPA: 9.51).
+                    </p>
+                    <p>
+                        Currently working as an <strong>SDE Intern at Sports Reconnect</strong>,
+                        where I've reduced manual resume updates by ~70% through engineering structured
+                        MongoDB schemas and dynamic Next.js frontends.
+                    </p>
+                    <p>
+                        I'm passionate about building scalable applications, contributing to open-source
+                        projects, and leading teams in hackathons. My work spans from privacy-focused
+                        messaging platforms to AI-assisted travel planners and 3D web experiences.
+                    </p>
+                </div>
+                <div class="about-education">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <div class="education-details">
+                            <h3>B.E. Information Technology</h3>
+                            <p>VESIT, Chembur</p>
+                            <span class="education-date">June 2024 - May 2028</span>
+                            <span class="education-cgpa">CGPA: 9.51</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>SDE Intern</h3>
+                            <span class="timeline-company">Sports Reconnect Internship Programme</span>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Dec 2025 - Mar 2026</span>
+                            <span class="timeline-location">Mumbai, Maharashtra</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>
+                                Accomplished streamlined athlete profile management by
+                                <strong>reducing manual resume updates by ~70%</strong> and improving media load efficiency
+                            </li>
+                            <li>
+                                Engineered structured <strong>MongoDB schemas</strong>, a dynamic
+                                <strong>Next.js 16 frontend</strong>, and an optimized
+                                <strong>Cloudinary-based media pipeline</strong> for images and videos
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Next.js 16</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Cloudinary</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Secure Ephemeral Messaging -->
+                <article class="project-card" data-category="personal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Anexus5919/realtime-chat" class="project-link" target="_blank" rel="noopener" title="View Code">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://realtime-chat-ivory-rho.vercel.app" class="project-link" target="_blank" rel="noopener" title="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Secure Ephemeral Messaging</h3>
+                            <span class="project-type">Personal Project</span>
+                        </div>
+                        <p class="project-date">Dec 2025 - Jan 2026</p>
+                        <p class="project-description">
+                            Privacy-focused real-time chat system with strict 2-participant room limit and
+                            automatic message destruction after 10-minute sessions using TTL-based eviction.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Zero unauthorized joins with type-safe communication</li>
+                            <li>100% automatic destruction of chat rooms</li>
+                            <li>Self-destructing infrastructure on Upstash Redis</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Next.js 16</span>
+                            <span class="tag">ElysiaJS</span>
+                            <span class="tag">Upstash</span>
+                            <span class="tag">Eden Treaty</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Player Profile System -->
+                <article class="project-card" data-category="internship">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Anexus5919/player-profile-system" class="project-link" target="_blank" rel="noopener" title="View Code">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://player-profile-system.vercel.app" class="project-link" target="_blank" rel="noopener" title="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Player Profile System</h3>
+                            <span class="project-type">Internship Project</span>
+                        </div>
+                        <p class="project-date">Dec 2025 - Jan 2026</p>
+                        <p class="project-description">
+                            Comprehensive web application for athletes to create, manage, and showcase their professional
+                            sports profiles with career statistics, achievements, and media.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Shareable format for scouts and coaches</li>
+                            <li>Cloudinary-based media management</li>
+                            <li>Built during Sports Reconnect internship</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Next.js 16</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Cloudinary</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Foodie -->
+                <article class="project-card" data-category="hackathon">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Anexus5919/foodie" class="project-link" target="_blank" rel="noopener" title="View Code">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://foodie-three-sigma.vercel.app" class="project-link" target="_blank" rel="noopener" title="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Foodie - Food Delivery App</h3>
+                            <span class="project-type">StackHack 3.0</span>
+                        </div>
+                        <p class="project-date">Nov 2025 - Dec 2025</p>
+                        <p class="project-description">
+                            End-to-end food ordering experience with AI-assisted ordering and
+                            real-time order tracking across multiple application states.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Complete order lifecycle simulation</li>
+                            <li>AI-assisted ordering system</li>
+                            <li>Led 2-member team at Mercer Mettl hackathon</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Next.js 15</span>
+                            <span class="tag">AI Integration</span>
+                            <span class="tag">Real-time Tracking</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: RoamIQ -->
+                <article class="project-card" data-category="internship">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Anexus5919/RoamIQ" class="project-link" target="_blank" rel="noopener" title="View Code">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://roam-iq.vercel.app" class="project-link" target="_blank" rel="noopener" title="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="10" r="3"/>
+                                <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>RoamIQ - Trip Planner</h3>
+                            <span class="project-type">Gradguide Internship</span>
+                        </div>
+                        <p class="project-date">Oct 2025 - Nov 2025</p>
+                        <p class="project-description">
+                            Intelligent travel itinerary generator producing 100% real and verifiable
+                            locations with real-time streamed responses using local Llama 3 models.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Integrates TomTom and SerpAPI</li>
+                            <li>React Server Components for streaming</li>
+                            <li>Custom reasoning-visualization UI</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Next.js 15</span>
+                            <span class="tag">Llama 3</span>
+                            <span class="tag">TomTom API</span>
+                            <span class="tag">SerpAPI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: EduSchedulAI -->
+                <article class="project-card" data-category="hackathon">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Anexus5919/SIH_Prototype" class="project-link" target="_blank" rel="noopener" title="View Code">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://sihvesit.vercel.app" class="project-link" target="_blank" rel="noopener" title="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>EduSchedulAI</h3>
+                            <span class="project-type">SIH 2025</span>
+                        </div>
+                        <p class="project-date">Sep 2025 - Oct 2025</p>
+                        <p class="project-description">
+                            Smart academic scheduling system aligned with NEP 2020 guidelines featuring
+                            constraint-driven, conflict-free schedule generation.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>JWT-based authentication</li>
+                            <li>jsPDF exports for distribution</li>
+                            <li>Led 5-member team in Smart India Hackathon</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Next.js 15</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">jsPDF</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Aimlabs -->
+                <article class="project-card" data-category="personal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Anexus5919/Aimlabs" class="project-link" target="_blank" rel="noopener" title="View Code">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://aimlabs-puce.vercel.app" class="project-link" target="_blank" rel="noopener" title="Live Demo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Aimlabs - 3D Aim Trainer</h3>
+                            <span class="project-type">Personal Project</span>
+                        </div>
+                        <p class="project-date">Oct 2025 - Nov 2025</p>
+                        <p class="project-description">
+                            Web-based aim trainer built with Three.js featuring practice mode with
+                            difficulty settings and detailed performance statistics.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Score, accuracy, and shots per minute tracking</li>
+                            <li>Multiple difficulty levels and durations</li>
+                            <li>3D raycaster-based targeting system</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Three.js</span>
+                            <span class="tag">WebGL</span>
+                            <span class="tag">Raycaster</span>
+                            <span class="tag">Vite</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7: Customizable Cube -->
+                <article class="project-card" data-category="personal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Anexus5919/Customizable-cube" class="project-link" target="_blank" rel="noopener" title="View Code">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Customizable 3D Cube</h3>
+                            <span class="project-type">Personal Project</span>
+                        </div>
+                        <p class="project-date">Sep 2025 - Oct 2025</p>
+                        <p class="project-description">
+                            Interactive 3D graphics project with real-time customization using lil-gui
+                            debug panel for position, color, wireframe, and GSAP animations.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Real-time property adjustments</li>
+                            <li>GSAP-powered spin animations</li>
+                            <li>Subdivision and wireframe controls</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Three.js</span>
+                            <span class="tag">WebGL</span>
+                            <span class="tag">GSAP</span>
+                            <span class="tag">lil-gui</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 8: Student Management System -->
+                <article class="project-card" data-category="personal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Anexus5919/Student_Management_System" class="project-link" target="_blank" rel="noopener" title="View Code">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Student Management System</h3>
+                            <span class="project-type">Personal Project</span>
+                        </div>
+                        <p class="project-date">Dec 2025</p>
+                        <p class="project-description">
+                            Desktop application for managing student records with login authentication,
+                            analytics dashboard, report generation, and theme customization.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>SQLite database management</li>
+                            <li>Analytics and report generation</li>
+                            <li>Custom themes and dashboard</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Tkinter</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                        Programming
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                        Frameworks & Libraries
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="95">
+                            <span class="skill-name">Next.js</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">ReactJS</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="75">
+                            <span class="skill-name">Three.js / WebGL</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                        Backend & Databases
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">NodeJS</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">MongoDB / NoSQL</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <span class="skill-name">ExpressJS</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="75">
+                            <span class="skill-name">SQL / JWT</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                        Styling & UI
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">Tailwind CSS V4</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">Shadcn UI</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <span class="skill-name">GSAP</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category full-width">
+                    <h3 class="skill-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                        Dev Tools & Platforms
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Apache Ant</span>
+                        <span class="skill-tag">Selenium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section class="section opensource" id="opensource">
+        <div class="container">
+            <h2 class="section-title">Open Source Contributions</h2>
+            <div class="opensource-grid">
+                <!-- Sugar Labs -->
+                <div class="opensource-card">
+                    <div class="opensource-header">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="github-icon">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <div class="opensource-info">
+                            <h3>Sugar Labs</h3>
+                            <a href="https://github.com/sugarlabs/www.v2" target="_blank" rel="noopener">sugarlabs/www-v2</a>
+                        </div>
+                        <span class="pr-badge">2 PRs Merged</span>
+                    </div>
+                    <p class="opensource-description">
+                        Implemented 3D flip interaction for leadership cards and restricted YouTube embed
+                        recommendations. Delivered production-grade UX features including bento-style layouts.
+                    </p>
+                    <div class="pr-list">
+                        <a href="https://github.com/sugarlabs/www.v2/pull/669" target="_blank" class="pr-item">
+                            <span class="pr-number">#669</span>
+                            <span class="pr-title">feat(ux): implement 3D flip interaction for leadership cards</span>
+                        </a>
+                        <a href="https://github.com/sugarlabs/www.v2/pull/703" target="_blank" class="pr-item">
+                            <span class="pr-number">#703</span>
+                            <span class="pr-title">fix(volunteer): restrict YouTube embed recommendations</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Accord Project -->
+                <div class="opensource-card">
+                    <div class="opensource-header">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="github-icon">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <div class="opensource-info">
+                            <h3>Accord Project</h3>
+                            <a href="https://github.com/accordproject/template-playground" target="_blank" rel="noopener">accordproject/template-playground</a>
+                        </div>
+                        <span class="pr-badge">2 PRs Merged</span>
+                    </div>
+                    <p class="opensource-description">
+                        Resolved ESLint errors and warnings across the codebase and fixed UI layout issues
+                        by constraining learn layout height to prevent content overflow.
+                    </p>
+                    <div class="pr-list">
+                        <a href="https://github.com/accordproject/template-playground/pull/440" target="_blank" class="pr-item">
+                            <span class="pr-number">#440</span>
+                            <span class="pr-title">chore(lint): resolve ESLint errors and warnings across codebase</span>
+                        </a>
+                        <a href="https://github.com/accordproject/template-playground/pull/433" target="_blank" class="pr-item">
+                            <span class="pr-number">#433</span>
+                            <span class="pr-title">fix(ui): constrain learn layout height to prevent overflow</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Medusa.js -->
+                <div class="opensource-card">
+                    <div class="opensource-header">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="github-icon">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <div class="opensource-info">
+                            <h3>Medusa.js</h3>
+                            <a href="https://github.com/medusajs/medusa" target="_blank" rel="noopener">medusajs/medusa</a>
+                        </div>
+                        <span class="pr-badge">1 PR Merged</span>
+                    </div>
+                    <p class="opensource-description">
+                        Contributed documentation fix by correcting 'provirder' typo to 'provider' across
+                        multiple files in this popular open-source e-commerce platform.
+                    </p>
+                    <div class="pr-list">
+                        <a href="https://github.com/medusajs/medusa/pull/14614" target="_blank" class="pr-item">
+                            <span class="pr-number">#14614</span>
+                            <span class="pr-title">fix: correct 'provirder' typo to 'provider' across files</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cal.com -->
+                <div class="opensource-card">
+                    <div class="opensource-header">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="github-icon">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <div class="opensource-info">
+                            <h3>Cal.com</h3>
+                            <a href="https://github.com/calcom/cal.com" target="_blank" rel="noopener">calcom/cal.com</a>
+                        </div>
+                        <span class="pr-badge">Contributor</span>
+                    </div>
+                    <p class="opensource-description">
+                        Delivered frontend improvements by enhancing in-app focus through modal-based
+                        content restructuring and resolving layout and usability issues.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">
+                I'm currently looking for new opportunities. Whether you have a question
+                or just want to say hi, feel free to reach out!
+            </p>
+            <div class="contact-content">
+                <div class="contact-links">
+                    <a href="mailto:anexus5919@gmail.com" class="contact-link">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">anexus5919@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="tel:+919324449044" class="contact-link">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+91 93244 49044</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/anexus/" class="contact-link" target="_blank" rel="noopener">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">linkedin.com/in/anexus</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Anexus5919" class="contact-link" target="_blank" rel="noopener">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/Anexus5919</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & Built by <strong>Adarsh Singh</strong></p>
+            <p class="footer-year">2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
