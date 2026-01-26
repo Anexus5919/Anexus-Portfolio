@@ -181,8 +181,8 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach((el, index) => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = `opacity 0.3s ease ${index * 0.05}s, transform 0.3s ease ${index * 0.05}s`;
     revealObserver.observe(el);
 });
 
@@ -262,6 +262,39 @@ function handleSplashParallax() {
 }
 
 window.addEventListener('scroll', handleSplashParallax);
+
+// ==========================================
+// Show More Projects Toggle
+// ==========================================
+const showMoreBtn = document.getElementById('show-more-projects');
+const hiddenProjects = document.querySelectorAll('.project-card.hidden');
+
+if (showMoreBtn && hiddenProjects.length > 0) {
+    showMoreBtn.addEventListener('click', () => {
+        const isExpanded = showMoreBtn.classList.contains('expanded');
+
+        hiddenProjects.forEach((project, index) => {
+            if (isExpanded) {
+                project.classList.add('hidden');
+            } else {
+                project.classList.remove('hidden');
+                // Trigger reveal animation for newly shown projects
+                project.style.opacity = '0';
+                project.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    project.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    project.style.opacity = '1';
+                    project.style.transform = 'translateY(0)';
+                }, index * 50);
+            }
+        });
+
+        showMoreBtn.classList.toggle('expanded');
+        showMoreBtn.innerHTML = isExpanded
+            ? `Show More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`
+            : `Show Less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
+    });
+}
 
 // ==========================================
 // Console Easter Egg

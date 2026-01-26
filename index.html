@@ -15,6 +15,7 @@
         <div class="nav-container">
             <a href="#hero" class="nav-logo">AS</a>
             <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -51,30 +52,7 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <!-- Profile on Left -->
-            <div class="hero-visual">
-                <div class="profile-artistic">
-                    <div class="splash splash-1"></div>
-                    <div class="splash splash-2"></div>
-                    <div class="splash splash-3"></div>
-                    <div class="splash splash-4"></div>
-                    <div class="splash splash-5"></div>
-                    <img src="profile.svg" alt="Adarsh Singh" class="profile-image">
-                </div>
-                <!-- Rotating Hire Me Badge -->
-                <div class="hire-badge">
-                    <svg viewBox="0 0 100 100" class="hire-badge-text">
-                        <defs>
-                            <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
-                        </defs>
-                        <text>
-                            <textPath href="#circle">Web Developer . UI/UX Designer . </textPath>
-                        </text>
-                    </svg>
-                    <span class="hire-badge-inner">Hire Me</span>
-                </div>
-            </div>
-            <!-- Text on Right -->
+            <!-- Text on Left -->
             <div class="hero-text">
                 <h1 class="hero-headline">Turning Vision Into Reality With Code And Design.</h1>
                 <p class="hero-description">
@@ -93,16 +71,17 @@
                     <a href="#contact" class="btn btn-secondary">Contact</a>
                 </div>
             </div>
-        </div>
-        <!-- Decorative Light Bulb -->
-        <div class="decorative-bulb">
-            <svg viewBox="0 0 64 64" fill="none">
-                <ellipse cx="32" cy="24" rx="18" ry="20" fill="#FCD34D" opacity="0.9"/>
-                <rect x="26" y="44" width="12" height="8" rx="2" fill="#FCD34D"/>
-                <rect x="28" y="52" width="8" height="4" rx="1" fill="#F59E0B"/>
-                <path d="M26 48h12M26 50h12" stroke="#F59E0B" stroke-width="1.5"/>
-                <path d="M32 12v4M24 16l2 3M40 16l-2 3" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+            <!-- Profile on Right -->
+            <div class="hero-visual">
+                <div class="profile-artistic">
+                    <div class="splash splash-1"></div>
+                    <div class="splash splash-2"></div>
+                    <div class="splash splash-3"></div>
+                    <div class="splash splash-4"></div>
+                    <div class="splash splash-5"></div>
+                    <img src="profile.svg" alt="Adarsh Singh" class="profile-image">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -130,11 +109,8 @@
                 </div>
                 <div class="about-education">
                     <div class="education-card">
-                        <div class="education-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                            </svg>
+                        <div class="education-icon college-logo">
+                            <img src="vesit.svg" alt="VESIT Logo">
                         </div>
                         <div class="education-details">
                             <h3>B.E. Information Technology</h3>
@@ -381,7 +357,7 @@
                 </article>
 
                 <!-- Project 5: EduSchedulAI -->
-                <article class="project-card" data-category="hackathon">
+                <article class="project-card hidden" data-category="hackathon">
                     <div class="project-image">
                         <div class="project-overlay">
                             <a href="https://github.com/Anexus5919/SIH_Prototype" class="project-link" target="_blank" rel="noopener" title="View Code">
@@ -431,7 +407,7 @@
                 </article>
 
                 <!-- Project 6: Aimlabs -->
-                <article class="project-card" data-category="personal">
+                <article class="project-card hidden" data-category="personal">
                     <div class="project-image">
                         <div class="project-overlay">
                             <a href="https://github.com/Anexus5919/Aimlabs" class="project-link" target="_blank" rel="noopener" title="View Code">
@@ -480,7 +456,7 @@
                 </article>
 
                 <!-- Project 7: Customizable Cube -->
-                <article class="project-card" data-category="personal">
+                <article class="project-card hidden" data-category="personal">
                     <div class="project-image">
                         <div class="project-overlay">
                             <a href="https://github.com/Anexus5919/Customizable-cube" class="project-link" target="_blank" rel="noopener" title="View Code">
@@ -522,7 +498,7 @@
                 </article>
 
                 <!-- Project 8: Student Management System -->
-                <article class="project-card" data-category="personal">
+                <article class="project-card hidden" data-category="personal">
                     <div class="project-image">
                         <div class="project-overlay">
                             <a href="https://github.com/Anexus5919/Student_Management_System" class="project-link" target="_blank" rel="noopener" title="View Code">
@@ -562,6 +538,14 @@
                         </div>
                     </div>
                 </article>
+            </div>
+            <div class="show-more-container">
+                <button class="btn-show-more" id="show-more-projects">
+                    Show More
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
