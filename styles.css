@@ -304,11 +304,11 @@ ul {
 }
 
 .splash-1 {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
     background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-    top: 0;
-    right: 20%;
+    top: -3%;
+    right: 10%;
     opacity: 0.8;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     animation: morphSplash1 8s ease-in-out infinite;
@@ -318,41 +318,41 @@ ul {
     width: 150px;
     height: 180px;
     background: linear-gradient(180deg, #06b6d4 0%, #0ea5e9 100%);
-    bottom: 15%;
-    left: 5%;
+    bottom: 12%;
+    left: -2%;
     opacity: 0.7;
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     animation: morphSplash2 10s ease-in-out infinite;
 }
 
 .splash-3 {
-    width: 120px;
-    height: 140px;
+    width: 130px;
+    height: 150px;
     background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
-    bottom: 5%;
-    right: 15%;
+    bottom: 0%;
+    right: 5%;
     opacity: 0.75;
     border-radius: 50% 60% 40% 70% / 50% 70% 30% 60%;
     animation: morphSplash3 7s ease-in-out infinite;
 }
 
 .splash-4 {
-    width: 80px;
-    height: 100px;
+    width: 90px;
+    height: 110px;
     background: linear-gradient(180deg, #10b981 0%, #34d399 100%);
-    top: 20%;
-    left: 10%;
+    top: 18%;
+    left: 2%;
     opacity: 0.6;
     border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
     animation: morphSplash4 9s ease-in-out infinite;
 }
 
 .splash-5 {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
-    top: 10%;
-    right: 35%;
+    top: 8%;
+    right: 42%;
     opacity: 0.5;
     border-radius: 50%;
     animation: float 5s ease-in-out infinite;
