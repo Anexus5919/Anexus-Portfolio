@@ -924,8 +924,9 @@ ul {
     background: rgba(99, 102, 241, 0.1);
 }
 
-/* Show More Projects */
-.project-card.hidden {
+/* Show More Projects & Open Source */
+.project-card.hidden,
+.opensource-card.hidden {
     display: none;
 }
 

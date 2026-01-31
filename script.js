@@ -305,6 +305,39 @@ if (showMoreBtn && hiddenProjects.length > 0) {
 }
 
 // ==========================================
+// Show More Open Source Toggle
+// ==========================================
+const showMoreOpensourceBtn = document.getElementById('show-more-opensource');
+const hiddenOpensource = document.querySelectorAll('.opensource-card.hidden');
+
+if (showMoreOpensourceBtn && hiddenOpensource.length > 0) {
+    showMoreOpensourceBtn.addEventListener('click', () => {
+        const isExpanded = showMoreOpensourceBtn.classList.contains('expanded');
+
+        hiddenOpensource.forEach((card, index) => {
+            if (isExpanded) {
+                card.classList.add('hidden');
+            } else {
+                card.classList.remove('hidden');
+                // Trigger reveal animation for newly shown cards
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 50);
+            }
+        });
+
+        showMoreOpensourceBtn.classList.toggle('expanded');
+        showMoreOpensourceBtn.innerHTML = isExpanded
+            ? `Show More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`
+            : `Show Less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
+    });
+}
+
+// ==========================================
 // Console Easter Egg
 // ==========================================
 console.log('%c Adarsh Singh Portfolio ', 'background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; font-size: 20px; padding: 10px 20px; border-radius: 5px;');
