@@ -1443,3 +1443,180 @@ ul {
         align-items: flex-start;
     }
 }
+
+/* ==========================================
+   3D Project Carousel
+   ========================================== */
+.carousel-scroll-spacer {
+    height: 300vh;
+    position: relative;
+}
+
+.carousel-sticky-wrapper {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-sticky-wrapper .section-title {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#carousel-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.carousel-project-info {
+    position: absolute;
+    bottom: 4.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%) translateY(8px);
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 1.25rem 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    min-width: 300px;
+    max-width: 420px;
+}
+
+.carousel-project-info.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.carousel-project-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+}
+
+.carousel-info-type {
+    font-size: 0.7rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.carousel-info-desc {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+.carousel-info-tags {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.6rem;
+}
+
+.carousel-info-tags .tag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 9999px;
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--color-primary-light);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.carousel-info-links {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.carousel-info-links a {
+    color: var(--color-text);
+    font-size: 0.75rem;
+    text-decoration: none;
+    padding: 0.35rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+    font-weight: 500;
+}
+
+.carousel-info-links a:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+}
+
+.carousel-scroll-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    animation: carouselBounce 2s ease infinite;
+}
+
+.carousel-scroll-hint svg {
+    opacity: 0.6;
+}
+
+@keyframes carouselBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-6px); }
+}
+
+/* Light theme adjustments for carousel */
+[data-theme="light"] .carousel-project-info {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+[data-theme="light"] .carousel-info-links a {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+/* Mobile: hide 3D carousel, show fallback message */
+@media (max-width: 768px) {
+    .carousel-scroll-spacer {
+        height: auto;
+    }
+
+    .carousel-sticky-wrapper {
+        position: relative;
+        height: 80vh;
+        min-height: 500px;
+    }
+
+    .carousel-project-info {
+        min-width: 260px;
+        max-width: 90vw;
+        padding: 1rem 1.25rem;
+        bottom: 3.5rem;
+    }
+}

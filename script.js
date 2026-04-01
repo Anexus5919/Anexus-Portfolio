@@ -189,39 +189,8 @@ revealElements.forEach((el, index) => {
 });
 
 // ==========================================
-// Project Card Tilt Effect
+// Project Card Tilt Effect (disabled - using 3D carousel)
 // ==========================================
-function initTiltEffect(card) {
-    card.addEventListener('mouseenter', () => {
-        if (window.innerWidth < 768) return;
-        card.style.transition = 'transform 0.15s ease';
-    });
-
-    card.addEventListener('mousemove', (e) => {
-        if (window.innerWidth < 768) return;
-
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        // Reduced tilt intensity (divided by 40 instead of 15)
-        const rotateX = (y - centerY) / 40;
-        const rotateY = (centerX - x) / 40;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transition = 'transform 0.3s ease';
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-    });
-}
-
-// Initialize tilt for all project cards
-document.querySelectorAll('.project-card').forEach(initTiltEffect);
 
 // ==========================================
 // Hero Animation on Load
@@ -274,37 +243,8 @@ function handleSplashParallax() {
 window.addEventListener('scroll', handleSplashParallax);
 
 // ==========================================
-// Show More Projects Toggle
+// Show More Projects Toggle (disabled - using 3D carousel)
 // ==========================================
-const showMoreBtn = document.getElementById('show-more-projects');
-const hiddenProjects = document.querySelectorAll('.project-card.hidden');
-
-if (showMoreBtn && hiddenProjects.length > 0) {
-    showMoreBtn.addEventListener('click', () => {
-        const isExpanded = showMoreBtn.classList.contains('expanded');
-
-        hiddenProjects.forEach((project, index) => {
-            if (isExpanded) {
-                project.classList.add('hidden');
-            } else {
-                project.classList.remove('hidden');
-                // Trigger reveal animation for newly shown projects
-                project.style.opacity = '0';
-                project.style.transform = 'translateY(20px) scale(1)';
-                setTimeout(() => {
-                    project.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                    project.style.opacity = '1';
-                    project.style.transform = 'translateY(0) scale(1)';
-                }, index * 50);
-            }
-        });
-
-        showMoreBtn.classList.toggle('expanded');
-        showMoreBtn.innerHTML = isExpanded
-            ? `Show More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`
-            : `Show Less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
-    });
-}
 
 // ==========================================
 // Show More Open Source Toggle
