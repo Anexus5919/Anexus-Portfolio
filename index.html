@@ -164,9 +164,10 @@
         </div>
     </section>
 
-    <!-- Projects Section - 3D Carousel -->
+    <!-- Projects Section - 3D Carousel (desktop) + Static Cards (mobile) -->
     <section class="section projects" id="projects">
-        <div class="carousel-scroll-spacer">
+        <!-- Desktop: 3D Carousel -->
+        <div class="carousel-scroll-spacer carousel-desktop-only">
             <div class="carousel-sticky-wrapper">
                 <div class="container">
                     <h2 class="section-title">Featured Projects</h2>
@@ -186,6 +187,12 @@
                     scroll to explore
                 </div>
             </div>
+        </div>
+
+        <!-- Mobile: Static Project Cards -->
+        <div class="container carousel-mobile-only">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid" id="mobile-projects-grid"></div>
         </div>
     </section>
 
