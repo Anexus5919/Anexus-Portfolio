@@ -3,6 +3,15 @@ import * as THREE from 'three';
 // ── Project Data ──
 const projects = [
     {
+        title: 'OnBoardIQ',
+        type: 'Syrus 2026',
+        desc: 'AI-powered onboarding platform guiding developers through role-specific checklists using conversational AI, RAG-based retrieval, and real-time tracking.',
+        tags: ['Next.js 14', 'Fastify', 'Groq AI', 'PostgreSQL', 'Prisma'],
+        image: 'public/onboardiq.png',
+        github: 'https://github.com/Anexus5919/OnBoardIQ',
+        live: 'https://onboardiq-web.vercel.app'
+    },
+    {
         title: 'Omnicare - Recovery Companion',
         type: 'Nakshatra',
         desc: 'A comprehensive HealthTech platform for patients, doctors, and caregivers to monitor and manage post-surgical recovery collaboratively.',
@@ -337,7 +346,7 @@ carouselGroup.position.y = -0.8;
 scene.add(carouselGroup);
 
 const cardMeshes = [];
-const RADIUS = 7.5;
+const RADIUS = 8;
 const CARD_W = 2.5;
 const CARD_H = 2.2;
 
