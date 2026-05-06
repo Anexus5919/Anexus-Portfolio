@@ -3,6 +3,15 @@ import * as THREE from 'three';
 // ── Project Data ──
 const projects = [
     {
+        title: 'SWRMS',
+        type: 'BMC Chembur Ward | UN SDG 11',
+        desc: 'Tech-driven municipal waste collection system with geo-fenced attendance, AI face recognition, live route tracking, and tamper-evident audit logs.',
+        tags: ['Next.js 16', 'face-api.js', 'Leaflet', 'MongoDB', 'OSRM'],
+        image: 'public/swrms.png',
+        github: 'https://github.com/Anexus5919/SWRMS',
+        live: 'https://swrms.vercel.app'
+    },
+    {
         title: 'OnBoardIQ',
         type: 'Syrus 2026',
         desc: 'AI-powered onboarding platform guiding developers through role-specific checklists using conversational AI, RAG-based retrieval, and real-time tracking.',
@@ -424,10 +433,18 @@ const infoDesc = document.getElementById('carousel-info-desc');
 const infoTags = document.getElementById('carousel-info-tags');
 const infoLinks = document.getElementById('carousel-info-links');
 
+let displayedIndex = null;
+
 function updateInfoPanel(index) {
     if (index === null) {
-        infoPanel.classList.remove('visible');
+        if (displayedIndex !== null) {
+            infoPanel.classList.remove('visible');
+            displayedIndex = null;
+        }
         return;
+    }
+    if (index === displayedIndex) {
+        return; // Already showing this project — don't rewrite DOM
     }
     const p = projects[index];
     infoTitle.textContent = p.title;
@@ -441,6 +458,7 @@ function updateInfoPanel(index) {
     }
     infoLinks.innerHTML = links;
     infoPanel.classList.add('visible');
+    displayedIndex = index;
 }
 
 canvas.addEventListener('mousemove', (e) => {
